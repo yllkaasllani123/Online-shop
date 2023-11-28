@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anaylla</title>
+    <title>Contact us - Anaylla</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
@@ -20,8 +20,25 @@
     </header>
 
     <main>
-
+        <section class="form-container">
+            <form class="form" onsubmit="return validateForm()">
+                <div class="form-content">
+                    <label for="emri">Emri</label>
+                    <input type="text" id="emri" name="emri">
+                </div>
         
+                <div class="form-content">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <div class="form-button-container">
+                    <button type="submit" class="form-button" id="registerButton">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer>
@@ -41,5 +58,26 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('emri').value;
+            var password = document.getElementById('password').value;
+    
+            var nameRegex = /^[a-zA-Z\s]+$/;
+    
+            if (!nameRegex.test(name)) {
+                alert('Please enter a valid name.');
+                return false;
+            }
+    
+            if (password.length < 1) {
+                alert('Please enter a password.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
