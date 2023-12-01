@@ -106,8 +106,7 @@ footer {
     color: white;
     border: none;
     cursor: pointer;
-<<<<<<< HEAD
-    background-color: rgb(255, 157, 0);
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -118,8 +117,8 @@ footer {
         flex-direction: column;
         justify-content: space-evenly;
          border-radius: 5px;
-        background-color: #FFE3BB;
-        border: 2px solid #fab958;
+        background-color: white;
+        border: 2px solid white;
        
        
     
