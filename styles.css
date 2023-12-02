@@ -104,10 +104,10 @@ footer {
 .form-button {
     padding: 8px;
     background-color: #333;
-    color: white;
+    color: whitesmoke;
     border: none;
     cursor: pointer;
-    background-color: white;
+    background-color: #333;
     border-radius: 10px;
 }
 
