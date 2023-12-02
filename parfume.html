@@ -4,10 +4,21 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Parfums</title> 
-    <style> body { font-family: Arial, sans-serif; }
-        .container {
+    <style> 
+        body { font-family: Arial, sans-serif;
+        
+    }
+    header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+       
+    .container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-wrap: wrap;
         margin: 20px;
     }
 
@@ -15,7 +26,10 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 20px;
-        width: 30%;
+        width: 300px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        text-align:center;
+
     }
 
     .product h2 {
@@ -35,25 +49,28 @@
 </style>
 </head> 
 <body> 
+    <header>
+        <h1>Womans parfumes</h1>
+    </header>
     <div class="container"> 
         <div class="product"> 
             <h2>GIORGIO ARMANI SI </h2> 
             <img src="parfums/giorgioarmanisi.PNG" alt="" style="width: 200px; height: 200px;">
             <p>EAU DE PARFUM</p> 
-            <div class="price">€ 94.80</div> 
+            <div class="price">94.80 € </div> 
         </div>
         <div class="product">
             <h2>GIORGIO ARMANI MY WAY NACRE </h2>
             <img src="parfums/giorgioarmanimywaynacre.PNG " alt="" style="width: 200px; height: 200px;">
             <p>EAU DE PARFUM</p>
-            <div class="price">€ 124.70</div>
+            <div class="price">124.70 € </div>
         </div>
     
         <div class="product">
             <h2>GIORGIO ARMANI STRONGER WITH YOU AMBER </h2>
             <img src="parfums/giorgioarmanistrongerwithyouamber.PNG" alt="" style="width: 200px; height: 200px;">
             <p>EAU DE PARFUM</p>
-            <div class="price">€ 88.50</div>
+            <div class="price">88.50 €</div>
         </div>
     </div>
     
@@ -62,21 +79,21 @@
             <h2>JEAN PAUL GAULTIER GAULTIER DIVINE</h2>
             <img src="parfums/jeanpaulgaultiergaultierdivine.PNG " alt="" style="width: 200px; height: 200px;">
             <p>EAU DE PARFUM</p>
-            <div class="price">€ 162.30</div>
+            <div class="price">162.30 € </div>
         </div>
     
         <div class="product">
             <h2>JEAN PAUL LA BELLE LE PARFUM </h2>
             <img src="parfums/jeanpaullabelle.PNG" alt="" style="width: 200px; height: 200px;">
             <p>EAU DE PARFUM INTENSE</p>
-            <div class="price">€ 123.20</div>
+            <div class="price">123.20 € </div>
         </div>
     
         <div class="product">
             <h2>JEAN PAUL GAULTIER SCANDAL</h2>
-            <img src="parfums/jeanpaulgaultierscandal.PNG " alt="" style="width: 200px; height: 200px;">
+            <img src="parfums/jeanpaulgaultierscandal.jpeg " alt="" style="width: 200px; height: 200px;">
             <p>EAU DE PARFUM</p>
-            <div class="price">€ 152.60</div>
+            <div class="price">152.60 € </div>
         </div>
     </div>
 </body> 
