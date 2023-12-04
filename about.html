@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+ 
     <header>
         <img src="public/anaylla.PNG" alt="Anaylla Logo">   
         <div class="header-container">
@@ -20,6 +21,58 @@
         </div>
       
     </header>
+    <style type ="text/css">
+        #kontenti {
+            display: flex ;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI light', Tahoma;
+            width: 500px;
+            margin:0 auto;
+        }
+        #kontenti img {
+            max-width: 700px;
+            height: 400px;
+        }
+        button{
+            border-radius: 100%;
+            border-style: inherit;
+            width: 40px;
+            height: 40px;
+            font: 10pt;
+        }
+        button:hover{
+            background-color: rgb(123, 115, 115);
+        }
+        </style>
+    </head>
+    <body>
+        <div id="kontenti">
+            <header>
+          
+            <img id="slideshow" />
+            </header>
+            <button onclick="changeImg()">Next</button>
+        </div>
+    
+        <script>
+            let i = 0;
+            let imgArray = ['skincare-business-services.jpg','photo.jpg','ingrident image.jpeg','FOTO.jpg'];
+    
+            function changeImg(){
+                document.getElementById('slideshow').src = imgArray[i];
+    
+                if(i< imgArray.length -1){
+                    i++;
+                }
+                else{
+                    i=0;
+                }
+                //setTimeout("changeImg()", 2600);
+            }
+            document.addEventListener(onload, changeImg());
+        </script>
 
     <main class="container">
         
@@ -44,7 +97,7 @@
                 Customer-Centric Approach: Your satisfaction is our priority. We are here to cater to your beauty needs, offering personalized recommendations and excellent customer service.
                 Transparency: We believe in transparency. From ingredient sourcing to product manufacturing, we are open about our processes to build trust with our customers.</p>
          
-            <div></div><h2>Our Community</h2>
+            <h2>Our Community</h2>
             <p>Anaylla is more than just a cosmetics brand; it's a community. We are proud to be involved in various charitable initiatives and social causes that align with our values. 
             Together with our customers, we aim to make a positive impact on the world.</p>
             <p>Thank you for choosing Anaylla.  Join us on this exciting journey, and let's redefine beauty together!</p></div>
