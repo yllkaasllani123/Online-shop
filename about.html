@@ -28,7 +28,8 @@
             justify-content: center;
             align-items: center;
             font-family: 'Segoe UI light', Tahoma;
-            width: 500px;
+            width: 100%;
+            overflow: hidden;
             margin:0 auto;
         }
         #kontenti img {
@@ -50,8 +51,7 @@
     <body>
         <div id="kontenti">
             <header>
-            <h2>Slide show</h2>
-            <img src="1.jpg" alt="" id="slideshow">
+            <img src="/aboutus/1.jpg" alt="" id="slideshow">
         </header>
         
         <button onclick="nderroFoton()">Next</button>
@@ -59,7 +59,7 @@
     
         <script>
            let i = 0;
-            var imgArray=['1.jpg', '2.jpg', '3.jpg','4.jpg',]
+            var imgArray=['/aboutus/1.jpg', '/aboutus/2.jpg', '/aboutus/3.jpg','/aboutus/4.jpg',]
     
             function nderroFoton(){
                 document.getElementById('slideshow').src = imgArray[i];
