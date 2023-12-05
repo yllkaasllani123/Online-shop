@@ -50,28 +50,25 @@
     <body>
         <div id="kontenti">
             <header>
-          
-            <img id="slideshow" />
-            </header>
-            <button onclick="changeImg()">Next</button>
+            <h2>Slide show</h2>
+            <img src="1.jpg" alt="" id="slideshow">
+        </header>
+        
+        <button onclick="nderroFoton()">Next</button>
         </div>
     
         <script>
-            let i = 0;
-            let imgArray = ['skincare-business-services.jpg','photo.jpg','ingrident image.jpeg','FOTO.jpg'];
+           let i = 0;
+            var imgArray=['1.jpg', '2.jpg', '3.jpg','4.jpg',]
     
-            function changeImg(){
+            function nderroFoton(){
                 document.getElementById('slideshow').src = imgArray[i];
-    
-                if(i< imgArray.length -1){
+                if(i<imgArray.length-1){
                     i++;
-                }
-                else{
+                }else{
                     i=0;
                 }
-                //setTimeout("changeImg()", 2600);
             }
-            document.addEventListener(onload, changeImg());
         </script>
 
     <main class="container">
@@ -124,3 +121,9 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
+
