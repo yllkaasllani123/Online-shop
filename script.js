@@ -30,3 +30,14 @@ let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
 
         alert('form submitted succesfully!');
     }
+    let i = 0;
+            var imgArray=['aboutus/1.png', 'aboutus/2.png', 'aboutus/3.png','aboutus/4.png',]
+    
+            function nderroFoton(){
+                document.getElementById('slideshow').src = imgArray[i];
+                if(i<imgArray.length-1){
+                    i++;
+                }else{
+                    i=0;
+                }
+            }
