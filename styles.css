@@ -1,6 +1,7 @@
 body {
-  margin: 0;
   font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
 }
 
 header { 
@@ -42,7 +43,6 @@ footer {
   justify-content: center;
 }
 
-
 footer {
   background-color: #d2d2d2;
   color: #373737;
@@ -81,6 +81,28 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+}
+@media only screen and (max-width: 600px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header-container {
+      margin-top: 20px;
+  }
+
+  .products-container {
+      flex-direction: column;
+  }
+
+  .product-item {
+      margin: 10px 0;
+  }
+
+  footer {
+      position: relative;
+  }
 }
 
 .form {
@@ -708,12 +730,16 @@ flex-wrap: wrap;
 justify-content: space-evenly;
 align-items: flex-start;
 align-content: flex-end;
-
 }
 .product-item {
   padding: 10px;
+  margin: 10px;
+  text-align: center;
+  flex: 1;
 }
-
+h3{
+  font-weight: 400;
+}
 .product-item img {
   height: 300px;
   width: 300px;
