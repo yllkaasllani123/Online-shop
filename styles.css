@@ -289,14 +289,14 @@ animation: showLogin .3s ease-in forwards;
   transform: translate(0, 0);
 }
 100% {
-  background-color: #fff;
+  background-color: #d2d2d2;
   transform: translate(35%, -20px);
 }
 }
 
 @keyframes hideLogin {
 0% {
-  background-color: #fff;
+  background-color: #d2d2d2;
   transform: translate(35%, -20px);
 }
 50% {
@@ -325,14 +325,14 @@ animation: showSignup .3s ease-in forwards;
   transform: translate(0, 0) scaleY(.8);
 }
 100% {
-  background-color: #fff;
+  background-color: #d2d2d2;
   transform: translate(-35%, -20px) scaleY(1);
 }
 }
 
 @keyframes hideSignup {
 0% {
-  background-color: #fff;
+  background-color: #d2d2d2;
   transform: translate(-35%, -20px) scaleY(1);
 }
 50% {
@@ -392,9 +392,9 @@ padding-right: 15px;
 padding-left: 15px;
 font-size: 16px;
 line-height: 40px;
-color: #333;
-background: #d2d2d2;
-border: 1px solid #d2d2d2;
+color: #373737;
+background: #373737;
+border: 1px solid #373737;
 border-radius: 2px;
 }
 
