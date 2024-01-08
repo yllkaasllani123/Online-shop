@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
+  overflow: auto;
 }
 
 header { 
@@ -748,5 +749,5 @@ h3{
 margin-bottom: 75px;
 }
 .titulli{
-padding: 12px;
+padding: 12px;
 }
