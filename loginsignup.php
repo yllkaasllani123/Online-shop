@@ -10,12 +10,11 @@
     <header>
         <img src="public/anaylla.png" alt="Anaylla Logo">
         <div class="header-container">
-            <p><a href="onlineshop.html">Home</a></p>
-            <p><a href="about.html">About Us</a></p>
-            <p><a href="contact.html">Contact Us</a></p>
-            <p><a href="products.html">Products</a></p>
-            <P><a href="loginsignup.html">Login/Sign up</a></P>
-            
+            <p><a href="onlineshop.php">Home</a></p>
+            <p><a href="about.php">About Us</a></p>
+            <p><a href="contact.php">Contact Us</a></p>
+            <p><a href="products.php">Products</a></p>
+            <P><a href="loginsignup.php">Login/Sign up</a></P>
         </div>
     </header>
 <section class="forms-section">
