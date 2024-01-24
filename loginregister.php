@@ -91,12 +91,12 @@ $conn->close();
             <input id="signup-email" type="email" name="email" required>
           </div>
           <div class="input-block">
-            <label for="signup-password">Password</label>
-            <input id="signup-password" type="password"name="password"  required>
+          <label for="signup-username">Username</label>
+            <input id="signup-username" type="username" name="username" required>
           </div>
           <div class="input-block">
-            <label for="signup-password-confirm">Confirm password</label>
-            <input id="signup-password-confirm" type="password" required>
+            <label for="signup-password">Password</label>
+            <input id="signup-password" type="password"name="password"  required>
           </div>
         </fieldset>
         <button type="submit" class="btn-signup">Continue</button>
