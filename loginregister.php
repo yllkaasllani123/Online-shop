@@ -1,8 +1,45 @@
+<?php
+include("connection.php");
+session_start();
+
+function sanitize_input($data)
+{
+    global $conn;
+    return mysqli_real_escape_string($conn, htmlspecialchars(trim($data)));
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $username = sanitize_input($_POST["username"]);
+  $password = sanitize_input($_POST["password"]);
+
+  $sql = "SELECT * FROM users WHERE username = '$username'";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+      $stored_password = $row["password"];
+
+      if ($password === $stored_password) {
+          session_start();
+          $_SESSION["username"] = $row["username"];
+          $_SESSION["name"] = $row["name"];
+
+          header("Location: welcome.php");
+          exit();
+      } else {
+          echo "Invalid password.";
+      }
+  } else {
+      echo "User not found.";
+    }
+}
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>LOGIN SIGN UP</title>
+    <title>LOGIN Register</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -14,7 +51,7 @@
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Us</a></p>
             <p><a href="products.php">Products</a></p>
-            <P><a href="loginsignup.php">Login/Sign up</a></P>
+            <P><a href="loginregister.php">Login/Sign up</a></P>
         </div>
     </header>
 <section class="forms-section">
@@ -24,16 +61,16 @@
         Login
         <span class="underline"></span>
       </button>
-      <form class="form form-login">
+      <form class="form form-login"  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <fieldset>
           <legend>Please, enter your email and password for login.</legend>
           <div class="input-block">
-            <label for="login-email">E-mail</label>
-            <input id="login-email" type="email" required>
+            <label for="login-username">Username</label>
+            <input id="login-username" type="username" name="username" required>
           </div>
           <div class="input-block">
             <label for="login-password">Password</label>
-            <input id="login-password" type="password" required>
+            <input id="login-password" type="password" name="password" required>
           </div>
         </fieldset>
         <button type="submit" class="btn-login">Login</button>
@@ -42,7 +79,7 @@
     <div class="form-wrapper">
       <button type="button" class="switcher switcher-signup">
         <script src="java.js"></script>
-        Sign Up
+        Register
         <span class="underline"></span>
       </button>
       <form class="form form-signup">
@@ -69,3 +106,5 @@
 </body>
 <script src="script.js"></script>
 </html>
+
+
