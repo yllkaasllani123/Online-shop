@@ -61,12 +61,12 @@
 </head> 
 <body> 
     <header>
-        <a href="onlineshop.html"><img src="public/anaylla.png" alt="Anaylla Logo"></a>
+        <a href="onlineshop.php"><img src="public/anaylla.png" alt="Anaylla Logo"></a>
     </header>
     <div class="container"> 
         <div class="product"> 
             <h2> DIOR BACKSTAGE </h2> 
-            <a href="makeup_details.html" class="product-link">
+            <a href="makeup_details.php" class="product-link">
             <img src="makeup/dior.jpeg" alt="" style="width: 200px; height: 200px;"></a>
             <p> Face & Body Foundation </p> 
             <div class="price"> 43.00 € </div> 
@@ -74,7 +74,7 @@
         </div>
         <div class="product">
             <h2> ESTEE LAUDER </h2>
-            <a href="makeup_details1.html" class="product-link">
+            <a href="makeup_details1.php" class="product-link">
             <img src="makeup/esteelauder.jpg" alt="" style="width: 200px; height: 200px;"></a>
             <p>Double wear stay in place foundation</p>
             <div class="price"> 55.60 € </div>
@@ -83,7 +83,7 @@
     
         <div class="product">
             <h2> LANCOME TEINT IDOLE </h2>
-            <a href="makeup_details2.html" class="product-link">
+            <a href="makeup_details2.php" class="product-link">
             <img src="makeup/lancome.jpg" alt="" style="width: 200px; height: 200px;"></a>
             <p>Ultra wear foundation</p>
             <div class="price"> 66.90 €</div>
@@ -94,7 +94,7 @@
     <div class="container">
         <div class="product">
             <h2>SHISEIDO SYNCHRO SKIN RADIANT LIFTING </h2>
-            <a href="makeup_details3.html" class="product-link">
+            <a href="makeup_details3.php" class="product-link">
             <img src="makeup/shiseido.jpg" alt="" style="width: 200px; height: 200px;"></a>
             <p> Foundation SPF 30   </p>
             <div class="price"> 62.40 € </div>
@@ -103,7 +103,7 @@
     
         <div class="product">
             <h2>FENTY PRO FILTER </h2>
-            <a href="makeup_details4.html" class="product-link">
+            <a href="makeup_details4.php" class="product-link">
             <img src="makeup/fenty.jpeg" alt="" style="width: 200px; height: 200px;"></a>
             <p> Soft Matte Longwear Liquid Foundation </p>
             <div class="price"> 40.00 € </div>
@@ -112,7 +112,7 @@
     
         <div class="product">
             <h2> CHARLOTTE TILBURY </h2>
-            <a href="makeup_details5.html" class="product-link">
+            <a href="makeup_details5.php" class="product-link">
             <img src="makeup/charlottetilbury.jpeg" alt="" style="width: 200px; height: 200px;"></a>
             <p>Airbrush Flawless Longwear Foundation  </p>
             <div class="price"> 49.70 € </div>

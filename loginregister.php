@@ -37,6 +37,7 @@ $conn->close();
 
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,26 +79,26 @@ $conn->close();
         <button type="submit" class="btn-login">Login</button>
       </form>
     </div>
-    <div class="form-wrapper" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <div class="form-wrapper">
       <button type="button" class="switcher switcher-signup">
         <script src="java.js"></script>
         Register
         <span class="underline"></span>
       </button>
-      <form class="form form-signup">
+      <form class="form form-signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <fieldset>
           <legend>Please, enter your email, password and password confirmation for sign up.</legend>
           <div class="input-block">
-            <label for="signup-email">E-mail</label>
-            <input id="signup-email" type="email" name="email" required>
+            <label for="register-username">Username</label>
+            <input id="register-userenme" type="username" name="username" placeholder="Username"required>
           </div>
           <div class="input-block">
-          <label for="signup-username">Username</label>
-            <input id="signup-username" type="username" name="username" required>
+          <label for="register-password">Pas</label>
+            <input id="register-password" type="password" name="password" required>
           </div>
           <div class="input-block">
-            <label for="signup-password">Password</label>
-            <input id="signup-password" type="password" name="password"  required>
+            <label for="signup-password">VerifyPassword</label>
+            <input id="signup-password" type="password" name="password2" placeholder="Verify your password" required>
           </div>
         </fieldset>
         <button type="submit" class="btn-signup">Continue</button>

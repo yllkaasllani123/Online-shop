@@ -22,19 +22,19 @@
         <main>
             <div class="products-container">
                 <div class="product-item">
-                    <a href="parfume.html"> 
+                    <a href="parfume.php"> 
                     <img src="parfume.jpg" alt="Parfume">
                     </a>
                     <h3>Parfumes</h3>
                 </div>
                 <div class="product-item">
-                    <a href="makeup.html"> 
+                    <a href="makeup.php"> 
                     <img src="makeupp.jpg" alt="Makeup">
                     </a>
                     <h3>Makeup</h3>
                 </div>    
                 <div class="product-item">
-                    <a href="skincare.html"> 
+                    <a href="skincare.php"> 
                     <img src="skincare.jpg" alt="Skincare">
                     </a>
                     <h3>Skincare</h3>
