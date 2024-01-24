@@ -78,7 +78,7 @@ body{
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Us</a></p>
             <p><a href="products.php">Products</a></p>
-            <P><a href="loginsignup.php">Login/Sign up</a></P>
+            <P><a href="loginregister.php">Login/Register</a></P>
            
     </header>
 

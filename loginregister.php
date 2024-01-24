@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +52,7 @@ $conn->close();
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Us</a></p>
             <p><a href="products.php">Products</a></p>
-            <P><a href="loginregister.php">Login/Sign up</a></P>
+            <P><a href="loginregister.php">Login/Register</a></P>
         </div>
     </header>
 <section class="forms-section">
@@ -76,7 +77,7 @@ $conn->close();
         <button type="submit" class="btn-login">Login</button>
       </form>
     </div>
-    <div class="form-wrapper">
+    <div class="form-wrapper" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
       <button type="button" class="switcher switcher-signup">
         <script src="java.js"></script>
         Register
@@ -87,11 +88,11 @@ $conn->close();
           <legend>Please, enter your email, password and password confirmation for sign up.</legend>
           <div class="input-block">
             <label for="signup-email">E-mail</label>
-            <input id="signup-email" type="email" required>
+            <input id="signup-email" type="email" name="email" required>
           </div>
           <div class="input-block">
             <label for="signup-password">Password</label>
-            <input id="signup-password" type="password" required>
+            <input id="signup-password" type="password"name="password"  required>
           </div>
           <div class="input-block">
             <label for="signup-password-confirm">Confirm password</label>
