@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $_SESSION["username"] = $row["username"];
           $_SESSION["name"] = $row["name"];
 
-          header("Location: welcome.php");
+          header("Location: online-shop.php");
           exit();
       } else {
           echo "Invalid password.";
@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 $conn->close();
 ?>
+
 
 
 <!DOCTYPE html>
@@ -96,7 +97,7 @@ $conn->close();
           </div>
           <div class="input-block">
             <label for="signup-password">Password</label>
-            <input id="signup-password" type="password"name="password"  required>
+            <input id="signup-password" type="password" name="password"  required>
           </div>
         </fieldset>
         <button type="submit" class="btn-signup">Continue</button>
