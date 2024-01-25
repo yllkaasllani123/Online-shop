@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $_SESSION["username"] = $row["username"];
           $_SESSION["name"] = $row["name"];
 
-          header("Location: online-shop.php");
+          header("Location: onlineshop.php");
           exit();
       } else {
           echo "Invalid password.";
@@ -64,7 +64,7 @@ $conn->close();
         Login
         <span class="underline"></span>
       </button>
-      <form class="form form-login"  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+      <form class="form form-login"  method="post" action="onlineshop"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <fieldset>
           <legend>Please, enter your email and password for login.</legend>
           <div class="input-block">
@@ -85,7 +85,7 @@ $conn->close();
         Register
         <span class="underline"></span>
       </button>
-      <form class="form form-signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+      <form class="form form-signup" method="post" action="onlineshop.php"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <fieldset>
           <legend>Please, enter your email, password and password confirmation for sign up.</legend>
           <div class="input-block">
@@ -94,7 +94,7 @@ $conn->close();
           </div>
           <div class="input-block">
           <label for="register-password">Pas</label>
-            <input id="register-password" type="password" name="password" required>
+            <input id="register-password" type="password" name="password" placeholder ="password" required>
           </div>
           <div class="input-block">
             <label for="signup-password">VerifyPassword</label>
