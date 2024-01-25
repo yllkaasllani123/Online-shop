@@ -7,36 +7,43 @@ function sanitize_input($data)
     global $conn;
     return mysqli_real_escape_string($conn, htmlspecialchars(trim($data)));
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $username = sanitize_input($_POST["username"]);
-  $password = sanitize_input($_POST["password"]);
+    if (isset($_POST["register-username"]) && isset($_POST["register-password"]) && isset($_POST["password2"])) {
+        $username = sanitize_input($_POST["register-username"]);
+        $password = sanitize_input($_POST["register-password"]);
+        $password2 = sanitize_input($_POST["password2"]);
 
-  $sql = "SELECT * FROM users WHERE username = '$username'";
-  $result = $conn->query($sql);
+        
+        if ($password !== $password2) {
+            echo "Passwords do not match.";
+            exit();
+        }
 
-  if ($result->num_rows > 0) {
-      $row = $result->fetch_assoc();
-      $stored_password = $row["password"];
+        
+        $is_admin = false; 
 
-      if ($password === $stored_password) {
-          session_start();
-          $_SESSION["username"] = $row["username"];
-          $_SESSION["name"] = $row["name"];
+        
+        $role = $is_admin ? 'admin' : 'user';
 
-          header("Location: onlineshop.php");
-          exit();
-      } else {
-          echo "Invalid password.";
-      }
-  } else {
-      echo "User not found.";
+        
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        
+        $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$hashed_password', '$role')";
+
+        
+        if (mysqli_query($conn, $sql)) {
+            echo "Registration successful!";
+        } else {
+            echo "Error during registration: " . mysqli_error($conn);
+        }
+    } else {
+        echo "Invalid registration data.";
     }
 }
-$conn->close();
+mysqli_close($conn);
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -64,7 +71,7 @@ $conn->close();
         Login
         <span class="underline"></span>
       </button>
-      <form class="form form-login"  method="post" action="onlineshop"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+      <form class="form form-login"  method="post" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <fieldset>
           <legend>Please, enter your email and password for login.</legend>
           <div class="input-block">
@@ -109,5 +116,3 @@ $conn->close();
 </body>
 <script src="script.js"></script>
 </html>
-
-
