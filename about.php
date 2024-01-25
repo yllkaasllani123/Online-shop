@@ -6,9 +6,101 @@
     <title>About Us - Anaylla</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
- 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI light', Tahoma;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+
+        .header-container {
+            display: flex;
+        }
+
+        .header-container p {
+            margin: 0 15px;
+        }
+
+        #kontenti {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #kontenti img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            border-radius: 50%;
+            border-style: none;
+            width: 50px;
+            height: 50px;
+            font-size: 10pt;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(107, 99, 99);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .social-link-container {
+            margin: 0 10px;
+        }
+
+        .social-link-container img {
+            max-width: 30px;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-container p {
+                margin: 10px 0;
+            }
+
+            #kontenti {
+                padding: 10px;
+            }
+
+            button {
+                width: 40px;
+                height: 40px;
+                font-size: 8pt;
+            }
+        }
+    </style>
+    </head>
+    <body>
     <header>
         <img src="public/anaylla.png" alt="Anaylla Logo">   
         <div class="header-container">
@@ -16,59 +108,18 @@
             <p><a href="about.php">About Us</a></p>
             <p><a href="contact.php">Contact Us</a></p>
             <p><a href="products.php">Products</a></p>
-            <P><a href="loginregister.php">Login/Register</a></P>
-
+            <p><a href="loginregister.php">Login/Register</a></p>
         </div>
     </header>
-    <style type="text/css">
-        #kontenti {
-            display: flex ;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI light', Tahoma;
-            width: 100%;
-            overflow: hidden;
-            margin:0 auto;
-            padding: 20px;
-            width: 750px;
-        }
-        #kontenti img {
-            max-width: 100%;
-            
-        }
-        button{
-            border-radius: 100%;
-            border-style: inherit;
-            width: 50px;
-            height: 50px;
-            font: 10pt;
-        }
 
-        button:hover{
-            background-color: rgb(107, 99, 99);
-        }
-        footer{
-            position: fixed;
-            bottom: 0;
-        }
-       
-        
-      </style>
-      
-    </head>
-    <body>
-        <div id="kontenti">
-            <header>
+    <div id="kontenti">
+        <header>
             <img src="aboutus/4.png" alt="" id="slideshow">
         </header>
-        
         <button onclick="nderroFoton()">Next</button>
-        </div>
+    </div>
     
-        <script src="script.js">
-
-        </script>
+        <script src="script.js"></script>
 
     <main class="container">
         
@@ -121,7 +172,6 @@
     <p>Prizren, Kosove/ 049 999 999/ info@anaylla.com</p>
 </footer>
 </html>
-
 
 
 
