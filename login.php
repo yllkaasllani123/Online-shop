@@ -1,8 +1,6 @@
 <?php
 include("connection.php");
 
-$errors = array();
-
 function sanitize($data)
 {
     global $conn;
@@ -13,38 +11,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize($_POST["login-username"]);
     $password = sanitize($_POST["login-password"]);
 
-    
     if (empty($username)) {
         $errors[] = "Username is required.";
+    } elseif (!preg_match("/^[a-zA-Z0-9_]+$/", $username)) {
+        $errors[] = "Username can only contain letters, numbers, and underscores.";
     }
 
-    
     if (empty($password)) {
         $errors[] = "Password is required.";
     }
 
+   
     if (empty($errors)) {
-        $sql = "SELECT * FROM users WHERE username = '$username'";
-        $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $stored_password = $row["password"];
+        echo "Form submitted successfully!";
+    }
+}
 
-            
-            if (password_verify($password, $stored_password)) {
-                session_start();
-                $_SESSION["username"] = $row["username"];
-                $_SESSION["name"] = $row["name"];
+    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $result = $conn->query($sql);
 
-                header("Location: onlineshop.php");
-                exit();
-            } else {
-                $errors[] = "Invalid password.";
-            }
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $stored_password = $row["password"];
+
+        if ($password === $stored_password) {
+            session_start();
+            $_SESSION["username"] = $row["username"];
+            $_SESSION["name"] = $row["name"];
+
+            header("Location: onlineshop.php");
+            exit();
         } else {
-            $errors[] = "User not found.";
+            echo "Invalid password.";
         }
+     else {
+        echo "User not found.";
     }
 }
 mysqli_close($conn);

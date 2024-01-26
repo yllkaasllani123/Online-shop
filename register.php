@@ -32,6 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Passwords do not match.";
             exit();
         }
+        if (empty($errors)) {
+
+          echo "Form submitted successfully!";
+      }
 
         $is_admin = false;
         $role = $is_admin ? 'admin' : 'user';
