@@ -39,7 +39,7 @@ mysqli_close($conn);
 <html>
     <form class="form form-signup" method="post" action="register.php">
         <fieldset>
-            <legend>Please, enter your username, password and password confirmation for sign up.</legend>
+            <legend>Please, enter your email, password and password confirmation for sign up.</legend>
             <div class="input-block">
                 <label for="register-username">Username</label>
                 <input id="register-username" type="username" name="register-username" placeholder="Username" required>
