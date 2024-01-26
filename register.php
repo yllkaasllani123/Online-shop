@@ -3,37 +3,56 @@ include("connection.php");
 
 function sanitize_input($data)
 {
-  global $conn;
-  return mysqli_real_escape_string($conn, htmlspecialchars(trim($data)));
+    global $conn;
+    return mysqli_real_escape_string($conn, htmlspecialchars(trim($data)));
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (isset($_POST["register-username"]) && isset($_POST["register-password"]) && isset($_POST["password2"])) {
-    $username = sanitize_input($_POST["register-username"]);
-    $password = sanitize_input($_POST["register-password"]);
-    $password2 = sanitize_input($_POST["password2"]);
-    if ($password !== $password2) {
-      echo "Passwords do not match.";
-      exit();
+    if (
+        isset($_POST["register-username"]) &&
+        isset($_POST["register-password"]) &&
+        isset($_POST["password2"])
+    ) {
+        $username = sanitize_input($_POST["register-username"]);
+        $password = sanitize_input($_POST["register-password"]);
+        $password2 = sanitize_input($_POST["password2"]);
+
+        if (empty($username)) {
+            echo "Username is required.";
+            exit();
+        }
+
+        
+        if (empty($password) || empty($password2)) {
+            echo "Both password fields are required.";
+            exit();
+        }
+
+        if ($password !== $password2) {
+            echo "Passwords do not match.";
+            exit();
+        }
+
+        $is_admin = false;
+        $role = $is_admin ? 'admin' : 'user';
+
+        
+        $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', '$role')";
+
+        if (mysqli_query($conn, $sql)) {
+            header("Location: onlineshop.php");
+            exit();
+        } else {
+            echo "Error during registration: " . mysqli_error($conn);
+        }
+    } else {
+        echo "Invalid registration data.";
     }
-    $is_admin = false;
-
-    $role = $is_admin ? 'admin' : 'user';
-
-    $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', '$role')";
-
-    if (mysqli_query($conn, $sql)) {
-      header("Location: onlineshop.php");
-      exit();
-  } else {
-      echo "Error during registration: " . mysqli_error($conn);
-  }
-  } else {
-    echo "Invalid registration data.";
-  }
 }
+
 mysqli_close($conn);
 ?>
+
 
 <!DOCTYPE html>
 <html>

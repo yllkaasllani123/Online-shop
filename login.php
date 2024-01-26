@@ -1,6 +1,8 @@
 <?php
 include("connection.php");
 
+$errors = array();
+
 function sanitize($data)
 {
     global $conn;
@@ -11,25 +13,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize($_POST["login-username"]);
     $password = sanitize($_POST["login-password"]);
 
-    $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $conn->query($sql);
+    
+    if (empty($username)) {
+        $errors[] = "Username is required.";
+    }
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $stored_password = $row["password"];
+    
+    if (empty($password)) {
+        $errors[] = "Password is required.";
+    }
 
-        if ($password === $stored_password) {
-            session_start();
-            $_SESSION["username"] = $row["username"];
-            $_SESSION["name"] = $row["name"];
+    if (empty($errors)) {
+        $sql = "SELECT * FROM users WHERE username = '$username'";
+        $result = $conn->query($sql);
 
-            header("Location: onlineshop.php");
-            exit();
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $stored_password = $row["password"];
+
+            
+            if (password_verify($password, $stored_password)) {
+                session_start();
+                $_SESSION["username"] = $row["username"];
+                $_SESSION["name"] = $row["name"];
+
+                header("Location: onlineshop.php");
+                exit();
+            } else {
+                $errors[] = "Invalid password.";
+            }
         } else {
-            echo "Invalid password.";
+            $errors[] = "User not found.";
         }
-    } else {
-        echo "User not found.";
     }
 }
 mysqli_close($conn);
