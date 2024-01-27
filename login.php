@@ -11,23 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize($_POST["login-username"]);
     $password = sanitize($_POST["login-password"]);
 
-    if (empty($username)) {
-        $errors[] = "Username is required.";
-    } elseif (!preg_match("/^[a-zA-Z0-9_]+$/", $username)) {
-        $errors[] = "Username can only contain letters, numbers, and underscores.";
-    }
-
-    if (empty($password)) {
-        $errors[] = "Password is required.";
-    }
-
-   
-    if (empty($errors)) {
-
-        echo "Form submitted successfully!";
-    }
-}
-
     $sql = "SELECT * FROM users WHERE username = '$username'";
     $result = $conn->query($sql);
 
@@ -45,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "Invalid password.";
         }
-     else {
+    } else {
         echo "User not found.";
     }
 }
@@ -70,3 +53,4 @@ mysqli_close($conn);
 </form>
 
 </html>
+

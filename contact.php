@@ -98,13 +98,12 @@ body{
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4"  placeholder="Message"required></textarea>
           
-
-            <button type="button">Submit</button>
+            <button type="button" onclick="validateForm()">Submit</button>
         </form>
     
     </div>
-  <script src="script.js"></script>
-  
+    <script src= "script.js"></script>
+
 
 
     <footer>
