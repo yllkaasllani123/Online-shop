@@ -83,6 +83,20 @@ body{
     width: 400px;
     height: 400px;
 }
+@media only screen and (max-width: 600px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-container p {
+                margin: 10px 0;
+            }
+
+            .container {
+                margin: 20px;
+            }
+        }
     
 </style>
 <body>
