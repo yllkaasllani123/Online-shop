@@ -68,6 +68,20 @@
         margin: 10px;
         color: #d2d2d2;
     }
+    @media only screen and (max-width: 600px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-container p {
+                margin: 10px 0;
+            }
+
+            .container {
+                margin: 20px;
+            }
+        }
     
 </style>
 

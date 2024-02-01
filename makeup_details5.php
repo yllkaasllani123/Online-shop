@@ -14,7 +14,7 @@
         <p><a href="about.php">About Us</a></p>
         <p><a href="contact.php">Contact Us</a></p>
         <p><a href="products.php">Products</a></p>
-        <P><a href="loginsignup.php">Login/Sign up</a></P>
+        <P><a href="loginregister.php">Login/Register</a></P>
     </div>
 </header>
 <style>
@@ -69,7 +69,20 @@
         color: #d2d2d2;
      
     }
-    
+    @media only screen and (max-width: 600px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-container p {
+                margin: 10px 0;
+            }
+
+            .container {
+                margin: 20px;
+            }
+        }
 </style>
 
 <body> 
