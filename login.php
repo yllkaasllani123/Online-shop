@@ -21,10 +21,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($password === $stored_password) {
             session_start();
             $_SESSION["username"] = $row["username"];
-            $_SESSION["name"] = $row["name"];
+            $_SESSION["role"] = $row["role"];
+            $_SESSION["id"] = $row["id"];
+            echo "User ID: " . $_SESSION["id"];
 
-            header("Location: onlineshop.php");
-            exit();
+            if ($row["role"] === 'admin') {
+                header("Location: dashboard.php");
+                exit();
+            } else {
+                header("Location: onlineshop.php");
+                exit();
+            }
+
         } else {
             echo "Invalid password.";
         }
@@ -53,4 +61,3 @@ mysqli_close($conn);
 </form>
 
 </html>
-
