@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI light', Tahoma;
         }
 
         header {
@@ -19,7 +18,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            background-color: #f8f8f8;
+            background-color: #d2d2d2;
         }
 
         .header-container {
@@ -59,7 +58,7 @@
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #f8f8f8;
+            background-color: #d2d2d2;
         }
 
         .social-links {

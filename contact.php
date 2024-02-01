@@ -1,3 +1,18 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+
+    mail('name@gmail.com', 'New Contact Form Submission', $message, 'From: ' . $email);
+
+    header('Location: thank_you.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,20 +101,21 @@ body{
         <h1>Contact Us</h1>
         <p>Have questions or need assistance? Feel free to reach out to us using the form below:</p>
 
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Name" required>
-            <div class="error-message" id="nameError"></div>
+        <form id="contactForm" action="thank_you.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <div class="error-message" id="nameError"></div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"  placeholder="Email"required>
-            <div class="error-message" id="emailError"></div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div class="error-message" id="emailError"></div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4"  placeholder="Message"required></textarea>
-          
-            <button type="button" onclick="validateForm()">Submit</button>
-        </form>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
     
     </div>
     <script src= "script.js"></script>
