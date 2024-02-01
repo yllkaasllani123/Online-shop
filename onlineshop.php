@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
+<style>
+@media only screen and (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-container {
+                margin-top: 20px;
+                flex-direction: column;
+            }
+
+            .products-container {
+                justify-content: center;
+            }
+
+            .product-item {
+                margin: 10px 0;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+
+</style>
 <body>
     <header>
         <img src="public/anaylla.png" alt="Anaylla Logo">
