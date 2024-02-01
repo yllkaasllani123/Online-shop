@@ -1,7 +1,7 @@
 <?php
-// 
-session_start();
-session_destroy();
-header("Location: onlineshop.php"); 
-exit();
-?>
+
+logout.php :
+  session_start(); 
+  session_destroy();
+  header('Location: login.php');
+  ?>
