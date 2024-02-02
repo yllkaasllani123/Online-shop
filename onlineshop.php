@@ -69,7 +69,7 @@
             </div>
             <div class="product-item">
                 <a href="importedProducts.php">
-                    <img src="download.png" alt="Download">
+                    <img src="newproduct.png" alt="Download">
                 </a>
                 <h3>New products</h3>
             </div>
