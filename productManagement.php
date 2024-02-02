@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
@@ -29,20 +30,26 @@
         .tab {
             margin: 0 20px;
             padding: 10px 20px;
-            background-color: #ddd;
-            border: 1px solid #ccc;
+            background-color: #555;
+            border: 1px solid #444;
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
+            color: white;
         }
 
         .tab:hover {
-            background-color: #ccc;
+            background-color: #777;
         }
 
         .content {
             text-align: center;
             margin: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         form {

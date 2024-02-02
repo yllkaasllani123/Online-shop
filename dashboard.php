@@ -71,13 +71,13 @@
 
         .logout {
             text-align: center;
-            margin-top: 150px;
+            margin: 20px 0; /* Adjust the margin as needed */
         }
 
         .logout a {
             text-decoration: none;
             font-weight: bold;
-            color: #333;
+            color: #777;
             transition: color 0.3s ease-in-out;
         }
 
@@ -98,11 +98,11 @@
             <p>Manage your products here.</p>
             <a href="productManagement.php">Go to Product Management</a>
         </div>
-    </div>
 
-    <div class="logout">
-        <a href="logout.php">Logout</a>
-    </div>  
+        <div class="logout">
+            <a href="logout.php">Logout</a>
+        </div>
+    </div>
 </body>
 
 </html>
