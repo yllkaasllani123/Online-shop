@@ -69,9 +69,9 @@
             </div>
             <div class="product-item">
                 <a href="importedProducts.php">
-                    <img src="skincare.jpg" alt="Skincare">
+                    <img src="download.png" alt="Download">
                 </a>
-                <h3>Imported products</h3>
+                <h3>New products</h3>
             </div>
         </div>
     </main>

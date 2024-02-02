@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header("Location: login.php");
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +7,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     <title>Product Management</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -26,7 +17,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 20px 0;
         }
 
         .tabs {
@@ -42,6 +33,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
             border: 1px solid #ccc;
             border-radius: 8px;
             cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
         }
 
         .tab:hover {
@@ -51,6 +43,40 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
         .content {
             text-align: center;
             margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #555;
         }
     </style>
 </head>
