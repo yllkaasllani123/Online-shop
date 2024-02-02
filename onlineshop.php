@@ -22,6 +22,7 @@
 
         .products-container {
             justify-content: center;
+            display: flex;
         }
 
         .product-item {
