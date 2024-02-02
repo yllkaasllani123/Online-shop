@@ -71,7 +71,7 @@
 
         .logout {
             text-align: center;
-            margin: 20px 0; 
+            margin: 20px 0;
         }
 
         .logout a {
@@ -97,6 +97,12 @@
             <h2>Product Management</h2>
             <p>Manage your products here.</p>
             <a href="productManagement.php">Go to Product Management</a>
+        </div>
+
+        <div class="card">
+            <h2>Messages</h2>
+            <p>See all messages here.</p>
+            <a href="allMessages.php">Go to messages</a>
         </div>
 
         <div class="logout">
