@@ -89,21 +89,35 @@
         $sql = "SELECT * FROM messages";
         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo '<div class="product">';
-                echo '<h2>' . $row['name'] . '</h2>';
-                echo '<div>' . $row['email'] . '</div>';
-                echo '<div>' . $row['message'] . '</div>';
-                echo '</div>';
-            }
-        } else {
-            echo "0 results";
-        }
+       
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo '<div class="product">';
+        echo '<h2>' . $row['name'] . '</h2>';
+        echo '<div>' . $row['email'] . '</div>';
+        echo '<div>' . $row['message'] . '</div>';
+        echo '<button onclick="checkDelete(' . $row['id'] . ');" type="button">Delete</button>';
+        echo '</div>';
+    }
+} else {
+    echo "0 results";
+}
+
+       
 
         $conn->close();
         ?>
     </div>
+    <script language="JavaScript" type="text/javascript">
+            
+            function checkDelete(delId){
+                
+                if(confirm('A jeni te sigurt?')){
+                    document.location.href = 'delete.php?delete='+delId; //confirm eshte i njejte sikurse alert
+                                     return true;
+                }
+            }
+        </script>
 </body>
 
 </html>
