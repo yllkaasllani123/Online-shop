@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makeup</title>
+    <title>Messages</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -86,17 +86,15 @@
     <div class="container">
         <?php
         include('connection.php');
-        $sql = "SELECT products.*, users.username AS username FROM products LEFT JOIN users ON products.userId = users.id";
+        $sql = "SELECT * FROM messages";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="product">';
                 echo '<h2>' . $row['name'] . '</h2>';
-                echo '<p>Added/Edited by: ' . $row['username'] . '</p>';
-                echo '<img src="' . $row['image'] . '" alt="" style="width: 200px; height: 200px;"></a>';
-                echo '<div class="price">' . $row['price'] . ' €</div>';
-                echo '<button>Add to Cart</button>';
+                echo '<div>' . $row['email'] . '</div>';
+                echo '<div>' . $row['message'] . '</div>';
                 echo '</div>';
             }
         } else {
