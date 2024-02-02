@@ -102,7 +102,7 @@
 
     <div class="logout">
         <a href="logout.php">Logout</a>
-    </div>
+    </div>  
 </body>
 
 </html>

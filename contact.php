@@ -1,18 +1,5 @@
-<?php
-//include("connection.php");
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
 
 
-    mail('name@gmail.com', 'New Contact Form Submission', $message, 'From: ' . $email);
-
-    header('Location: thank_you.php');
-    exit();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">

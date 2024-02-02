@@ -11,38 +11,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = sanitize($_POST["login-username"]);
     $password = sanitize($_POST["login-password"]);
 
-    $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $stored_password = $row["password"];
-
-        if ($password === $stored_password) {
-            session_start();
-            $_SESSION["username"] = $row["username"];
-            $_SESSION["role"] = $row["role"];
-            $_SESSION["id"] = $row["id"];
-            echo "User ID: " . $_SESSION["id"];
-
-            if ($row["role"] === 'admin') {
-                header("Location: dashboard.php");
-                exit();
-            } else {
-                header("Location: onlineshop.php");
-                exit();
-            }
-
-        } else {
-            echo "Invalid password.";
-        }
+    if (empty($username) || empty($password)) {
+        echo "Please enter both username and password.";
     } else {
-        echo "User not found.";
-    }
-}
-mysqli_close($conn);
-?>
+        $sql = "SELECT * FROM users WHERE username = '$username'";
+        $result = $conn->query($sql);
 
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $stored_password = $row["password"];
+
+            if ($password === $stored_password) {
+                session_start();
+                $_SESSION["username"] = $row["username"];
+                $_SESSION["role"] = $row["role"];
+                $_SESSION["id"] = $row["id"];
+                echo "User ID: " . $_SESSION["id"];
+
+                if ($row["role"] === 'admin') {
+                    header("Location: dashboard.php");
+                    exit();
+                } else {
+                    header("Location: onlineshop.php");
+                    exit();
+                }
+            } else {
+                echo "Invalid password.";
+            }
+        } else {
+            echo "User not found.";
+        }
+    }
+    mysqli_close($conn);
+}
+?>
 <!DOCTYPE html>
 <html>
 <form class="form form-login" method="post" action="loginregister.php">
