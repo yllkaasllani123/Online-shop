@@ -71,7 +71,7 @@
 
         .logout {
             text-align: center;
-            margin: 20px 0; /* Adjust the margin as needed */
+            margin: 20px 0; 
         }
 
         .logout a {

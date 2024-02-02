@@ -41,11 +41,3 @@ let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
                     i=0;
                 }
             }
-function showTab(tabName) {
-                const tabs = ['create', 'update', 'delete'];
-    
-                tabs.forEach(tab => {
-                    const content = document.getElementById(`${tab}Content`);
-                    content.style.display = tab === tabName ? 'block' : 'none';
-                });
-            }
