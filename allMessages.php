@@ -122,8 +122,8 @@ if ($result->num_rows > 0) {
             
             function checkDelete(delId){
                 
-                if(confirm('A jeni te sigurt?')){
-                    document.location.href = 'delete.php?delete='+delId; //confirm eshte i njejte sikurse alert
+                if(confirm('Are you sure?')){
+                    document.location.href = 'delete.php?delete='+delId; 
                                      return true;
                 }
             }
