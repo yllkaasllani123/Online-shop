@@ -85,12 +85,16 @@
         button:hover {
             background-color: #555;
         }
+        a{
+            color: white;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Product Management</h1>
+        <a href="newProducts.php">New Products</a>
     </header>
 
     <div class="tabs">
