@@ -68,7 +68,7 @@
                 <h3>Skincare</h3>
             </div>
             <div class="product-item">
-                <a href="importedProducts.php">
+                <a href="newProducts.php">
                     <img src="newproduct.png" alt="Download">
                 </a>
                 <h3>New products</h3>
