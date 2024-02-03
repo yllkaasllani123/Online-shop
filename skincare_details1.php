@@ -112,7 +112,7 @@
             
             
             <div class="price">99.60 €</div> 
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     </div>
 </head>
@@ -136,4 +136,20 @@
         <p>Prizren, Kosove/ 049 999 999/ info@anaylla.com</p>
     </footer>
 </body>
+
+<script>
+  var buttons = document.getElementsByClassName('loginButton');
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      var isLoggedIn = false;
+      
+      if (isLoggedIn) {
+        alert('Welcome!');
+      } else {
+        alert('Signin or Login first!');
+      }
+    });
+  }
+</script>
 </html>

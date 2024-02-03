@@ -96,7 +96,7 @@ button{
             <img src="parfums/giorgioarmanisi.png" alt="GIORGIO ARMANI SI" style="width: 200px; height: 200px" ></a>
             <p>EAU DE PARFUM</p> 
             <div class="price">94.80 € </div> 
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
        
         <div class="product">
@@ -105,7 +105,7 @@ button{
             <img src="parfums/giorgioarmanimywaynacre.png " alt=" GIORGIO ARMANI MY WAY NACRE " style="width: 200px; height: 200px;"></a>
             <p>EAU DE PARFUM</p>
             <div class="price">124.70 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -114,7 +114,7 @@ button{
             <img src="parfums/giorgioarmanistrongerwithyouamber.png" alt=" GIORGIO ARMANI STRONGER WITH YOU AMBER " style="width: 200px; height: 200px;"></a>
             <p>EAU DE PARFUM</p>
             <div class="price">88.50 €</div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     </div>
     
@@ -125,7 +125,7 @@ button{
             <img src="parfums/jeanpaulgaultiergaultierdivine.PNG " alt="JEAN PAUL GAULTIER GAULTIER DIVINE" style="width: 200px; height: 200px;"></a>
             <p>EAU DE PARFUM</p>
             <div class="price">162.30 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -134,7 +134,7 @@ button{
             <img src="parfums/jeanpaullabelle.PNG" alt="JEAN PAUL LA BELLE LE PARFUM" style="width: 200px; height: 200px;"></a>
             <p>EAU DE PARFUM INTENSE</p>
             <div class="price">123.20 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -143,9 +143,25 @@ button{
             <img src="parfums/jeanpaulgaultierscandal.jpeg " alt="JEAN PAUL GAULTIER SCANDAL" style="width: 200px; height: 200px;"></a>
             <p>EAU DE PARFUM</p>
             <div class="price">152.60 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     </div>
 
 </body> 
+
+<script>
+  var buttons = document.getElementsByClassName('loginButton');
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      var isLoggedIn = false;
+      
+      if (isLoggedIn) {
+        alert('Welcome!');
+      } else {
+        alert('Signin or Login first!');
+      }
+    });
+  }
+</script>
 </html>

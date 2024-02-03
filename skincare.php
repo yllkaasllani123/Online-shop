@@ -93,7 +93,7 @@
             <img src="skincare/biotherm.jpg" alt=" BIOTHERM BLUE PRO-RETINOL " style="width: 200px; height: 200px;"></a>
             <p> Night creme </p> 
             <div class="price"> 104.30 € </div> 
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
         <div class="product">
             <h2> CHANEL HYDRA BEAUTY </h2>
@@ -101,7 +101,7 @@
             <img src="skincare/chanel.png" alt="CHANEL HYDRA BEAUTY" style="width: 200px; height: 200px;"></a>
             <p> Micro creme </p>
             <div class="price"> 99.60 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -110,7 +110,7 @@
             <img src="skincare/clarins.jpg" alt=" CLARINS MULTI ACTIVE " style="width: 200px; height: 200px;"></a>
             <p> Day gel-cream </p>
             <div class="price"> 71.40 €</div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     </div>
     
@@ -121,7 +121,7 @@
             <img src="skincare/clinique.jpg" alt=" CLINIQUE SERUM " style="width: 200px; height: 200px;"></a>
             <p> Anti blemish & line correcting </p>
             <div class="price"> 72.90 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -130,7 +130,7 @@
             <img src="skincare/dior.jpg" alt=" DIOR CAPTURE YOUTH GLOW BOOSTER " style="width: 200px; height: 200px;"></a>
             <p> Age-Delay Illuminating Serum </p>
             <div class="price"> 119.20 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -139,7 +139,7 @@
             <img src="skincare/lancome.jpg" alt=" LANCOME ADVANCED GÉNIFIQUE " style="width: 200px; height: 200px;"></a>
             <p> Sensitive serum </p>
             <div class="price"> 133.40 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     </div>
 </body> 

@@ -14,7 +14,7 @@
         <p><a href="about.php">About Us</a></p>
         <p><a href="contact.php">Contact Us</a></p>
         <p><a href="products.php">Products</a></p>
-        <P><a href="loginsignup.php">Login/Sign up</a></P>
+        <P><a href="loginregister.php">Login/Register</a></P>
     </div>
 </header>
 <style>
@@ -22,44 +22,44 @@
         font-family: Arial, sans-serif;
         background-color: white;
     }
+    
     header {
         background-color: #d2d2d2;
         color: white;
         text-align: center;
         padding: 10px;
     }
+       
     .container {
         display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
+        justify-content: left;
         flex-wrap: wrap;
         margin: 20px;
         margin-bottom: 70px;
     }
     .product {
         padding: 30px;
-        margin: 30px;
+        margin: 20px;
         width: 500px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         text-align:center;
-        width: 400px;
-        height: 400px;
     }
     .product h2 {
         margin-top: 0;
+    }
+    .product p {
+        font-size: 18px;
+        margin-bottom: 10px;
     }
     .price {
         font-size: 24px;
         font-weight: bold;
         margin-top: 10px;
     }
-
     .productspecifications{
        display: inline;
        padding: 20px;
        margin: 20px;
-       font-size: 18px;
-       margin-bottom: 10px;
     }
     button{
         background-color: #373737;
@@ -67,57 +67,42 @@
         padding: 5px;
         margin: 10px;
         color: #d2d2d2;
+     
     }
     @media only screen and (max-width: 600px) {
-        header {
-            flex-direction: column;
-            align-items: center;
-        }
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
 
-        .header-container {
-            margin-top: 20px;
-            flex-direction: column;
-        }
+            .header-container p {
+                margin: 10px 0;
+            }
 
-        .products-container {
-            justify-content: center;
-            display: flex;
+            .container {
+                margin: 20px;
+            }
         }
-
-        .product-item {
-            margin: 10px 0;
-        }
-
-        footer {
-            position: relative;
-        }
-    }
     
 </style>
 
 <body> 
+    
     <div class="container"> 
         <div class="product"> 
-            <img src="parfums/jeanpaulgaultierscandal.jpeg " alt="jeanpaulgaultierscandal" style="width: 300px; height: 300px !important;">
+           
+            <img src="skincare/clinique.jpg" alt=" CLINIQUE SERUM " style="width: 200px; height: 200px;">
         </div>
         
         <div class="productspecifications">
-            <h2>JEAN PAUL GAULTIER SCANDAL</h2>  
-            <h4>Specifications</h4>
-            <p>Eau de parfum</p> 
-            <P>Scent: Jasemin Flower</P>
-            <p>Product Code: GS55663882912</p>
-            <label>Size: 30ml
-                <input name="size" type="radio" value="size 30ml">
-            </label>
-            <label>50 ml
-                <input name="size" type="radio" value="Size ">
-            </label>
-            <label>100 ml
-                <input name="size" type="radio" value="Size ">
-            </label>
+            <h2>CLINIQUE SERUM</h2>
+            <p>Anti blemish & line correcting</p>
+            <p>Product Code: MX9543257</p>
+         
+          
             
-            <div class="price">152.60 € </div>
+            
+            <div class="price">72.90 €</div> 
             <button class="loginButton">Add to Cart</button>
         </div>
     </div>
@@ -142,7 +127,6 @@
         <p>Prizren, Kosove/ 049 999 999/ info@anaylla.com</p>
     </footer>
 </body>
-
 <script>
   var buttons = document.getElementsByClassName('loginButton');
 
