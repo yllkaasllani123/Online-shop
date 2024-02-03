@@ -77,26 +77,30 @@
             height: auto;
         }
 
-        @media only screen and (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header-container p {
-                margin: 10px 0;
-            }
-
-            #kontenti {
-                padding: 10px;
-            }
-
-            button {
-                width: 40px;
-                height: 40px;
-                font-size: 8pt;
-            }
+        @media only screen and (max-width: 600px) {
+        header {
+            flex-direction: column;
+            align-items: center;
         }
+
+        .header-container {
+            margin-top: 20px;
+            flex-direction: column;
+        }
+
+        .products-container {
+            justify-content: center;
+            display: flex;
+        }
+
+        .product-item {
+            margin: 10px 0;
+        }
+
+        footer {
+            position: relative;
+        }
+    }
     </style>
     </head>
     <body>

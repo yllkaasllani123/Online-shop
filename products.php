@@ -75,19 +75,30 @@
         color: #d2d2d2;
     }
     @media only screen and (max-width: 600px) {
-  .header-container {
-      flex-direction: column;
-      text-align: center;
-  }
+        header {
+            flex-direction: column;
+            align-items: center;
+        }
 
-  .header-container p {
-      margin: 10px 0;
-  }
+        .header-container {
+            margin-top: 20px;
+            flex-direction: column;
+        }
 
-  .container {
-      margin: 20px;
-  }
-}
+        .products-container {
+            justify-content: center;
+            display: flex;
+        }
+
+        .product-item {
+            margin: 10px 0;
+        }
+
+        footer {
+            position: relative;
+        }
+    }
+
 
     
 </style>
