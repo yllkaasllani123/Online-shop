@@ -143,4 +143,19 @@
         </div>
     </div>
 </body> 
+<script>
+  var buttons = document.getElementsByClassName('loginButton');
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      var isLoggedIn = false;
+      
+      if (isLoggedIn) {
+        alert('Welcome!');
+      } else {
+        alert('Signin or Login first!');
+      }
+    });
+  }
+</script>
 </html>

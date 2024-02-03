@@ -94,7 +94,7 @@
             <img src="makeup/dior.jpeg" alt="" style="width: 200px; height: 200px;"></a>
             <p> Face & Body Foundation </p> 
             <div class="price"> 43.00 € </div> 
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
         <div class="product">
             <h2> ESTEE LAUDER </h2>
@@ -102,7 +102,7 @@
             <img src="makeup/esteelauder.jpg" alt="" style="width: 200px; height: 200px;"></a>
             <p>Double wear stay in place foundation</p>
             <div class="price"> 55.60 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -111,7 +111,7 @@
             <img src="makeup/lancome.jpg" alt="" style="width: 200px; height: 200px;"></a>
             <p>Ultra wear foundation</p>
             <div class="price"> 66.90 €</div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     </div>
     
@@ -122,7 +122,7 @@
             <img src="makeup/shiseido.jpg" alt="" style="width: 200px; height: 200px;"></a>
             <p> Foundation SPF 30   </p>
             <div class="price"> 62.40 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -131,7 +131,7 @@
             <img src="makeup/fenty.jpeg" alt="" style="width: 200px; height: 200px;"></a>
             <p> Soft Matte Longwear Liquid Foundation </p>
             <div class="price"> 40.00 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     
         <div class="product">
@@ -140,8 +140,23 @@
             <img src="makeup/charlottetilbury.jpeg" alt="" style="width: 200px; height: 200px;"></a>
             <p>Airbrush Flawless Longwear Foundation  </p>
             <div class="price"> 49.70 € </div>
-            <button>Add to Cart</button>
+            <button class="loginButton">Add to Cart</button>
         </div>
     </div>
 </body> 
+<script>
+  var buttons = document.getElementsByClassName('loginButton');
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      var isLoggedIn = false;
+      
+      if (isLoggedIn) {
+        alert('Welcome!');
+      } else {
+        alert('Signin or Login first!');
+      }
+    });
+  }
+</script>
 </html>
