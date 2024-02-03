@@ -9,7 +9,7 @@ if (isset($_GET['delete'])) {
     $delete_query = "DELETE FROM messages WHERE id='$delete_id' ";
 
     if (mysqli_query($connect, $delete_query)) {
-        echo "<script>alert('Produkti eshte Fshire');</script>";
+        echo "<script>alert('Product is deleted');</script>";
         echo "<script>window.open('allMessages.php','_self');</script>";
     }
 }
