@@ -94,6 +94,7 @@
                 echo '<div class="product">';
                 echo '<h2>' . $row['name'] . '</h2>';
                 echo '<p>Added/Edited by: ' . $row['username'] . '</p>';
+                echo '<a href="makeup_details.php" class="product-link">';
                 echo '<img src="' . $row['image'] . '" alt="" style="width: 200px; height: 200px;"></a>';
                 echo '<div class="price">' . $row['price'] . ' €</div>';
                 echo '<button>Add to Cart</button>';

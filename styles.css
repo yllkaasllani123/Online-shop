@@ -360,7 +360,7 @@ margin-bottom: 20px;
 
 .input-block label {
 font-size: 14px;
-color: #d2d2d2;
+color: #373737;
 }
 
 .input-block input {
@@ -415,7 +415,7 @@ box-sizing: border-box;
 
 body {
 margin: 0;
-font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+font-family: Roboto, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
 background: #D2D2D2;
 }
 

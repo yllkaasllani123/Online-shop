@@ -10,15 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     include('connection.php');
 
     $userId = $_SESSION['id'];
-    $productName = $_POST['productName'];
-    $productPrice = $_POST['productPrice'];
-    $productImage = $_POST['productImage'];
+    $messageName = $_POST['productName'];
+    $messageEmail = $_POST['productPrice'];
+    $messageContent = $_POST['productImage'];
 
-    $productName = mysqli_real_escape_string($conn, htmlspecialchars(trim($productName)));
-    $productPrice = mysqli_real_escape_string($conn, htmlspecialchars(trim($productPrice)));
-    $productImage = mysqli_real_escape_string($conn, htmlspecialchars(trim($productImage)));
+    $messageName = mysqli_real_escape_string($conn, htmlspecialchars(trim($messageName)));
+    $messageEmail = mysqli_real_escape_string($conn, htmlspecialchars(trim($messageEmail)));
+    $messageContent = mysqli_real_escape_string($conn, htmlspecialchars(trim($messageContent)));
 
-    $sql = "INSERT INTO products (name, price, image, userId) VALUES ('$productName', '$productPrice', '$productImage', '$userId')";
+    $sql = "INSERT INTO products (name, price, image, userId) VALUES ('$messageName', '$messageEmail', '$messageContent', '$userId')";
 
     if ($conn->query($sql) === TRUE) {
         echo '<script>alert("Product created successfully"); window.location.href = "productManagement.php";</script>';

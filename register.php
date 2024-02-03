@@ -9,6 +9,7 @@ function sanitize_input($data)
 
 function is_valid_password($password)
 {
+  
   $min_length = 8; 
   return strlen($password) >= $min_length;
 }
@@ -22,10 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($password !== $password2) {
       echo "<script>alert('Passwords do not match.'); window.location.href='loginregister.php';</script>";
       exit();
-    }
+  }
+  
+  
 
     if (!is_valid_password($password)) {
-      echo "<script>alert('Invalid password. Password must be at least 8 characters long.'); window.location.href='loginregister.php';</script>";
+      echo "Invalid password. Password must be at least 8 characters long.";
       exit();
     }
 
@@ -34,19 +37,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', '$role')";
 
     if (mysqli_query($conn, $sql)) {
-      header("Location: onlineshop.php");
+      header("Location: onlineshop1.php");
       exit();
     } else {
-      echo "<script>alert('Error during registration: " . mysqli_error($conn) . "'); window.location.href='loginregister.php';</script>";
+      echo "Error during registration: " . mysqli_error($conn);
     }
   } else {
-    echo "<script>alert('Invalid registration data.'); window.location.href='loginregister.php';</script>";
+    echo "Invalid registration data.";
   }
 }
 
 mysqli_close($conn);
 ?>
-
 
 
 <!DOCTYPE html>

@@ -11,7 +11,26 @@ session_start();
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+<style>
 
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .forms-section {
+    padding: 20px;
+  }
+}
+
+</style>
 <body>
   <header>
     <img src="public/anaylla.png" alt="Anaylla Logo">

@@ -118,38 +118,50 @@
         <button onclick="nderroFoton()">Next</button>
     </div>
     
-        <script src="script.js"></script>
+    <?php
+   include "connection.php";
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-    <main class="container">
-        
-        <section class="about-section">
-           <div class="titulli">  
-            <h1>Welcome to Anaylla cosmetics where beauty meets innovation! </h1>
-            <p> At Anaylla, we believe that everyone deserves to feel confident and beautiful in their skin. 
-            Our passion for cosmetics goes beyond just products; it's about empowering individuals to express their unique beauty.
-            Our products are carefully crafted using the finest ingredients to ensure a luxurious and enjoyable experience.</p>
-        
+    $sql = "SELECT title, content, section FROM about_us";
+    $result = $conn->query($sql);
 
-            <h2>Our Story</h2>
-            <p>Anaylla was born out of a desire to revolutionize the beauty industry. Founded in 2020, our journey started with a simple vision – to create high-quality cosmetics that not only enhance natural beauty but also inspire self-expression. </p>
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $title = $row["title"];
+            $content = $row["content"];
+            $section = $row["section"];
 
-            <h2>Our Mission</h2>
-            <p>At Anaylla, our mission is to redefine beauty standards and make cosmetics accessible to all. 
-            We are committed to creating products that not only elevate your look but also promote self-love and confidence. 
-            Our dedication to cruelty-free and environmentally conscious practices reflects our values of ethical beauty.</p>
-           
-            <h2>Why Choose Anaylla ?</h2>
-            <p>	Quality and Innovation: Our products are crafted with the finest ingredients and cutting-edge formulations, ensuring unparalleled quality and performance.
-                Customer-Centric Approach: Your satisfaction is our priority. We are here to cater to your beauty needs, offering personalized recommendations and excellent customer service.
-                Transparency: We believe in transparency. From ingredient sourcing to product manufacturing, we are open about our processes to build trust with our customers.</p>
-         
-            <h2>Our Community</h2>
-            <p>Anaylla is more than just a cosmetics brand; it's a community. We are proud to be involved in various charitable initiatives and social causes that align with our values. 
-            Together with our customers, we aim to make a positive impact on the world.</p>
-            <p>Thank you for choosing Anaylla.  Join us on this exciting journey, and let's redefine beauty together!</p></div>
-        </div>
-        </section>
-    </main>
+            echo "<main class='container'>";
+            echo "<section class='about-section'>";
+            
+            echo "<h1>$title</h1>";
+            echo "<p>$content</p>";
+
+            if ($section == 'story') {
+                
+            } elseif ($section == 'mission') {
+               
+            } elseif ($section == 'choose') {
+               
+            } elseif ($section == 'community') {
+              
+            }
+
+
+            echo "</div>";
+            echo "</section>";
+            echo "</main>";
+        }
+    } else {
+        echo "0 results";
+    }
+
+    $conn->close();
+    ?>
+
 
    
 </body>

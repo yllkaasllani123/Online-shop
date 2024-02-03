@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location: dashboard.php");
                     exit();
                 } else {
-                    header("Location: onlineshop.php");
+                    header("Location: onlineshop1.php");
                     exit();
                 }
             } else {
@@ -48,6 +48,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html>
+    <style>
+        @media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .forms-section {
+    padding: 20px;
+  }
+}
+
+    </style>
 <form class="form form-login" method="post" action="loginregister.php">
     <fieldset>
         <legend>Please, enter your email and password for login.</legend>
