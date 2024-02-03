@@ -36,6 +36,21 @@ $result = $conn->query($sql);
             padding: 8px;
             text-align: left;
         }
+        @media only screen and (max-width: 600px) {
+            th, td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            th, td {
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
