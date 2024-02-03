@@ -4,6 +4,33 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+     @media only screen and (max-width: 600px) {
+        header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-container {
+            margin-top: 20px;
+            flex-direction: column;
+        }
+
+        .products-container {
+            justify-content: center;
+            display: flex;
+            align: center
+        }
+
+        .product-item {
+            margin: 10px 0 ;
+        }
+
+        footer {
+            position: relative;
+        }
+    }
+  </style>
 
 <head>
   <meta charset="UTF-8">
