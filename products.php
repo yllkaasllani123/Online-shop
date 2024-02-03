@@ -303,8 +303,8 @@
 
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function() {
-      var isLoggedIn = false; // Change this to your actual login check logic
-
+      var isLoggedIn = false;
+      
       if (isLoggedIn) {
         alert('Welcome!');
       } else {
