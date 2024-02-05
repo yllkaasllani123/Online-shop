@@ -120,7 +120,14 @@
             </label>
             
             <div class="price">88.50 €</div>
-            <button class="loginButton">Add to Cart</button>
+        <form method="post" action="onlineshop1.php">
+            <input type="hidden" name="id" value="3">
+            <input type="hidden" name="name" value="GIORGIO ARMANI STRONGER WITH YOU AMBER">
+            <input type="hidden" name="price" value="88.50">
+            <input type="hidden" name="image" value="parfums/giorgioarmanistrongerwithyouamber.png">
+
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
         </div>
     </div>
 </head>

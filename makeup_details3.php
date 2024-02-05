@@ -120,7 +120,14 @@
             </label>
             
             <div class="price">62.40 €</div> 
-            <button class="loginButton">Add to Cart</button>
+        <form method="post" action="onlineshop1.php">
+            <input type="hidden" name="name" value="SHISEIDO SYNCHRO SKIN RADIANT LIFTING ">
+            <input type="hidden" name="id" value="10">
+            <input type="hidden" name="price" value="62.40">
+            <input type="hidden" name="image" value="makeup/shiseido.jpg">
+
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
         </div>
     </div>
 </head>

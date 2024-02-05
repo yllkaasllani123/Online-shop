@@ -118,7 +118,14 @@
             </label>
             
             <div class="price">152.60 € </div>
-            <button class="loginButton">Add to Cart</button>
+        <form method="post" action="onlineshop1.php">
+            <input type="hidden" name="id" value="6">
+            <input type="hidden" name="name" value="JEAN PAUL GAULTIER SCANDAL">
+            <input type="hidden" name="price" value="152.60">
+            <input type="hidden" name="image" value="parfums/jeanpaulgaultierscandal.jpeg">
+
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
         </div>
     </div>
 </head>

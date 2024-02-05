@@ -121,7 +121,14 @@
             </label>
             
             <div class="price">94.80 € </div>
-            <button class="loginButton">Add to Cart</button>
+            <form method="post" action="onlineshop1.php">
+                 <input type="hidden" name="id" value="1">
+                 <input type="hidden" name="name" value="GIORGIO ARMANI SI">
+                 <input type="hidden" name="price" value="94.80">
+                 <input type="hidden" name="image" value="parfums/giorgioarmanisi.png">
+
+                 <button type="submit" name="add_to_cart">Add to Cart</button>
+            </form>
         </div>
     </div>
 </head>

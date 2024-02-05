@@ -119,7 +119,14 @@
             </label>
             
             <div class="price"> 43.00 € </div> 
-            <button class="loginButton">Add to Cart</button>
+        <form method="post" action="onlineshop1.php">
+            <input type="hidden" name="id" value="7">
+            <input type="hidden" name="name" value="DIOR BACKSTAGE">
+            <input type="hidden" name="price" value="43.00">
+            <input type="hidden" name="image" value="makeup/dior.jpeg">
+
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
         </div>
     </div>
 </head>

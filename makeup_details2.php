@@ -120,7 +120,14 @@
             </label>
             
             <div class="price"> 66.90 €</div> 
-            <button class="loginButton">Add to Cart</button>
+        <form method="post" action="onlineshop1.php">
+            <input type="hidden" name="name" value="LANCOME TEINT IDOLE">
+            <input type="hidden" name="id" value="9">
+            <input type="hidden" name="price" value="66.90">
+            <input type="hidden" name="image" value="makeup/lancome.jpg">
+
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
         </div>
     </div>
 </head>

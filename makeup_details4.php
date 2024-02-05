@@ -120,7 +120,14 @@
             </label>
             
             <div class="price">40.00 €</div> 
-            <button class="loginButton">Add to Cart</button>
+        <form method="post" action="onlineshop1.php">
+            <input type="hidden" name="name" value="FENTY PRO FILTER">
+            <input type="hidden" name="id" value="11">
+            <input type="hidden" name="price" value="40.00">
+            <input type="hidden" name="image" value="makeup/fenty.jpeg">
+
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
         </div>
     </div>
 </head>

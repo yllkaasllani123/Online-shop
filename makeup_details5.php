@@ -119,7 +119,14 @@
             </label>
             
             <div class="price"> 49.70€</div> 
-            <button class="loginButton">Add to Cart</button>
+        <form method="post" action="onlineshop1.php">
+            <input type="hidden" name="name" value="CHARLOTTE TILBURY">
+            <input type="hidden" name="id" value="12">
+            <input type="hidden" name="price" value="49.70">
+            <input type="hidden" name="image" value="makeup/charlottetilbury.jpeg">
+
+            <button type="submit" name="add_to_cart">Add to Cart</button>
+        </form>
         </div>
     </div>
 </head>
