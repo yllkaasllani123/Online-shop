@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: loginregister.php"); //renamed the location to loginregister.php
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
